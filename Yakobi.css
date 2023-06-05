@@ -1,0 +1,64 @@
+body {
+	width: 100%;
+	min-width: 1920px;
+}
+.content{
+width:100%;
+padding:15px;
+box-sizing: border-box;
+height:50%;
+}
+.div{
+background-color:#f6d5fa;
+height:100%;
+box-sizing: border-box;
+padding-left:15px;
+}
+button{
+width:200px;
+margin:8px;
+box-sizing: border-box;
+padding: 10px;
+border: 1px black;
+border-radius: 4px;
+background-color: white;
+background-image: linear-gradient(to bottom, #98FB98, #FFB6C1);			
+box-shadow: inset 0 1px 3px 1px  rgba(0,0,0,.5);
+ outline: none;
+}
+button:hover {
+	cursor:pointer;
+}
+button:active{
+  background-image: linear-gradient(to bottom, rgb(255, 175, 3), #FFB6C1);
+}
+input{
+width: 60px;
+margin-bottom:15px;
+}
+select{
+	width: 60px;
+	margin-bottom:15px;
+}
+.new-line{
+margin-left:5px;
+margin-bottom:15px;
+position: relative;
+}
+.matrices{
+	background-color:#f6d5fa;
+	height:100%;
+	box-sizing: border-box;
+	padding-left: 2px;
+	text-align: left;
+}
+label{
+	font-size:17px;
+}
+.answers{
+	background-color:#bbe6ff;
+	height:100%;
+	box-sizing: border-box;
+	padding-left: 2px;
+	text-align: left;
+}

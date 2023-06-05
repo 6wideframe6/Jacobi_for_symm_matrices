@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Yakobi Method</title>
+<script src="yakobi.js"></script>
+<link rel="stylesheet" type="text/css" href="Yakobi.css">
+<style>
+html,body{height: 100%;}
+</style>
+</head>
+
+<body>
+	<div style="width: 99%; height: 5%; background-color: #FFEFD5; box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	times: 4px; box-sizing: border-box; padding: 5px; position: relative; float: center">
+		<div style="position: absolute; font-size: 20px; color: #000000;
+		top: 27%; left: calc(50% - 275px);">Нахождение спектра симметричной матрицы методом Якоби</div>		
+	</div>	
+	<div class="content">
+		<div class="div" style="float: left; width: 15%; position: relative; box-shadow: 0 0 10px rgba(0,0,0,0.5)" >
+			<p style="font-size:18.5px">Задайте матрицу:</p>
+			
+			<div class="new-line">
+				<label>Размерность матрицы:</label>
+				<input id="InSize" type="number" value="2" min="2" max="10" step="1" style="position: absolute; left: 65%">
+				<br><br>
+				<label>Точность:</label>
+				<select id="eps">
+					<option value="1e-3">1e-3</option>
+					<option value="1e-5">1e-5</option>
+					<option value="1e-8">1e-8</option>
+					<option value="1e-11">1e-11</option>
+					<option value="1e-14">1e-14</option>
+				</select>
+			</div>
+			
+			<div style="text-align:center">
+			
+			<script>SetValsFromForm();</script>
+			
+			<button type="button" onclick="SetValsFromForm(); CreateMatrix();">Применить</button>
+			<br>
+			<button type="button" onclick="SetValsFromForm(); SetRandomVals();">Заполнить с помощью генератора случайных чисел</button>
+			<br>	
+			<button type="button" onclick="SetValsFromForm(); MatrixComplementation(); GetValsFromForm(); YakobiMethod();">Решить</button>
+			</div>
+	</div>
+	<div class="matrices" id="InputMatr" style="position: relative; width:40%; left: 1%; box-shadow: 0 0 10px rgba(0,0,0,0.5); float: left; padding: 5px;">
+		<label>Исходная матрица:</label> <br>
+	</div>
+	<div class="matrices" id="OutputMatr" style="position: relative; width:40%; left: 2%; box-shadow: 0 0 10px rgba(0,0,0,0.5); float: left; padding: 5px;">
+		<label>Матрица, приведённая к диагональному виду:</label> <br>
+	</div>
+	<div class="answers" id="AnsNum" style="position: relative; width: 97%; height: 15%; top: 3%; box-shadow: 0 0 10px rgba(0,0,0,0.5); float: left; padding: 5px;">
+		<label>Собственные числа: </label> <br>
+	</div>
+	<div class="answers" id="VecNum" style="position: relative; width: 97%; height: 100%; top: 6%; box-shadow: 0 0 10px rgba(0,0,0,0.5); float: left; padding: 5px;">
+		<label>Собственные вектора: </label> <br>
+	</div>
+</body>
+</html>
